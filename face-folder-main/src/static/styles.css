@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Body and Background */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1C1C1E, #3A3A3C); /* Dark base background */
+    color: #E6E6FA; /* Light text for contrast */
+}
+
+/* Main Container */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Header Styling */
+header h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #00FF9C; /* Neon green for a futuristic vibe */
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 20px;
+    color: #FF91FF; /* Neon magenta for contrast */
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/* Card Style for Upload and Results */
+.card {
+    background: linear-gradient(135deg, #232529, #1C1C1E); /* Darker background for high contrast */
+    border-radius: 16px;
+    box-shadow: 0px 8px 30px rgba(0, 255, 180, 0.4); /* Glow shadow for neon effect */
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 450px;
+    transition: transform 0.3s;
+    color: #E6E6FA;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.02);
+}
+
+/* Upload Section Styling */
+.upload-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 1.8rem;
+}
+
+#file-input {
+    padding: 14px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 320px;
+    border: 2px solid #FFEF00; /* Bright yellow for contrast */
+    border-radius: 8px;
+    background-color: #1F1F21; /* Darker for high contrast */
+    color: #00FF9C;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+#file-input:hover, #file-input:focus {
+    border-color: #FF91FF; /* Bright magenta on hover */
+    background-color: #2A2A2C;
+}
+
+/* Button Styling */
+#upload-button {
+    padding: 14px 24px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #1C1C1E;
+    background-color: #00FF9C; /* Neon green for a futuristic look */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 100%;
+    max-width: 260px;
+    box-shadow: 0px 4px 15px rgba(0, 255, 180, 0.5);
+}
+
+#upload-button:hover {
+    background-color: #1AFFC3; /* Slightly lighter green for hover effect */
+    transform: scale(1.08);
+}
+
+#upload-button:active {
+    background-color: #00CC99; /* Slightly darker neon green on active */
+}
+
+/* Result Display Styling */
+.result-display {
+    margin-top: 1.8rem;
+    font-size: 22px;
+    color: #FFEF00; /* Bright yellow for futuristic contrast */
+    font-weight: 700;
+    padding: 14px;
+    border-top: 1px solid #00FF9C; /* Green contrast line */
+    text-shadow: 0px 0px 8px rgba(255, 239, 0, 0.8); /* Neon-like text shadow */
+}
+
+/* Footer */
+footer p {
+    margin-top: 2.5rem;
+    font-size: 15px;
+    color: #FF91FF; /* Magenta to keep the neon look */
+}
+
+/* Additional Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.card, header h1, #upload-button, #file-input {
+    animation: fadeIn 0.8s ease-in-out;
+}
